@@ -1,0 +1,78 @@
+{
+	"Credential": "cf",
+	"CF": {
+		"Target": "",
+		"Organization": "",
+		"Space": "",
+		"Deploy": {
+			"Description": "My SAP application",
+			"WebClient": {
+				"Runtime": "preview",
+				"URL": ""
+			},
+			"Destination": [
+				{
+					"CF": "zl230222Test-app-srv",
+					"MDK": "../service/zl230222Test/",
+					"URL": ""
+				}
+			]
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "",
+		"AppId": "lcap.zl230222Test.MDKUIAPP",
+		"Destination": []
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": ""
+	},
+	"LCAP": {
+		"FullName": "zl230222Test_MDKUIAPP",
+		"Service": [
+			{
+				"mdk": "MDKUIAPP/Services/service1.service",
+				"cap": {
+					"name": "zl230222TestService",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/zl230222Test/",
+					"entryPath": "/service/zl230222Test",
+					"destination": "zl230222Test-app-srv",
+					"value": "0"
+				},
+				"links": [
+					{
+						"entity": "zl230222TestService.SrvAuthors",
+						"files": [
+							"MDKUIAPP/Pages/SrvAuthors/SrvAuthors_Detail.page",
+							"MDKUIAPP/Pages/SrvAuthors/SrvAuthors_Edit.page",
+							"MDKUIAPP/Pages/SrvAuthors/SrvAuthors_List.page",
+							"MDKUIAPP/Actions/SrvAuthors/SrvAuthors_CreateEntity.action",
+							"MDKUIAPP/Actions/SrvAuthors/SrvAuthors_DeleteEntity.action",
+							"MDKUIAPP/Actions/SrvAuthors/SrvAuthors_UpdateEntity.action"
+						]
+					},
+					{
+						"entity": "zl230222TestService.SrvBooks",
+						"files": [
+							"MDKUIAPP/Pages/SrvBooks/SrvBooks_Detail.page",
+							"MDKUIAPP/Pages/SrvBooks/SrvBooks_Edit.page",
+							"MDKUIAPP/Pages/SrvBooks/SrvBooks_List.page",
+							"MDKUIAPP/Actions/SrvAuthors/SrvAuthors_CreateSrvBooks.action",
+							"MDKUIAPP/Actions/SrvBooks/SrvBooks_CreateEntity.action",
+							"MDKUIAPP/Actions/SrvBooks/SrvBooks_DeleteEntity.action",
+							"MDKUIAPP/Actions/SrvBooks/SrvBooks_UpdateEntity.action"
+						]
+					}
+				]
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}

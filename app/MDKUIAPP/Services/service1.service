@@ -1,0 +1,9 @@
+{
+    "DestinationName": "../service/zl230222Test/",
+    "OfflineEnabled": false,
+    "LanguageURLParam": "",
+    "OnlineOptions": {},
+    "PathSuffix": "",
+    "SourceType": "Cloud",
+    "ServiceUrl":""
+}

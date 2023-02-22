@@ -1,0 +1,53 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MDKUIAPP/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/MDKUIAPP/Rules/SrvAuthors/SrvAuthors_CreateEntity.js",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "Create SrvAuthors Detail",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Mode": "Datetime",
+							"_Name": "createdAt",
+							"Caption": "createdAt",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "createdBy",
+							"_Name": "createdBy",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "modifiedAt",
+							"Caption": "modifiedAt",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "modifiedBy",
+							"_Name": "modifiedBy",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "FormCellContainer",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SrvAuthors_Create"
+}

@@ -1,0 +1,63 @@
+{
+	"Caption": "Update SrvAuthors Detail",
+	"DesignTimeTarget": {
+		"Service": "/MDKUIAPP/Services/service1.service",
+		"EntitySet": "SrvAuthors",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/MDKUIAPP/Rules/SrvAuthors/SrvAuthors_Cancel.js"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MDKUIAPP/Rules/SrvAuthors/SrvAuthors_UpdateEntity.js"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Caption": "",
+					"Controls": [
+						{
+							"Mode": "Datetime",
+							"_Name": "createdAt",
+							"Value": "{createdAt}",
+							"Caption": "createdAt",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "createdBy",
+							"_Name": "createdBy",
+							"Value": "{createdBy}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Mode": "Datetime",
+							"_Name": "modifiedAt",
+							"Value": "{modifiedAt}",
+							"Caption": "modifiedAt",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "modifiedBy",
+							"_Name": "modifiedBy",
+							"Value": "{modifiedBy}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "PageOneFormCell",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SrvAuthors_Edit"
+}

@@ -1,0 +1,19 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/MDKUIAPP/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/MDKUIAPP/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "createdAt": "#Control:createdAt/#Value",
+        "createdBy": "#Control:createdBy/#Value",
+        "modifiedAt": "#Control:modifiedAt/#Value",
+        "modifiedBy": "#Control:modifiedBy/#Value"
+    },
+    "Target": {
+        "EntitySet": "SrvAuthors",
+        "Service": "/MDKUIAPP/Services/service1.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

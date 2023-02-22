@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/MDKUIAPP/Pages/SrvAuthors/SrvAuthors_CreateSrvBooks.page",
+    "_Type": "Action.Type.Navigation"
+}

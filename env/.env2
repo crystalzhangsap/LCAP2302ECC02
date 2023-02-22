@@ -1,0 +1,3 @@
+destinations=[]
+cds_requires={"Marketing_Contact":{"impl":"@sap/cds/libx/_runtime/remote/Service.js","external":true,"kind":"odata-v2","model":"srv/external/Marketing_Contact","credentials":{"url":"https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_MKT_CONTACT_SRV;v=0003","headers":{"ApiKey":"w3aqE64rsfc8HnZU2O0biapA1uW8lM6f"}}}}
+VCAP_SERVICES={}
