@@ -38,9 +38,9 @@ modules:
       _artifactName: MDKUIAPP.zip
       supported-platforms: []
       build-result: ../../build/dist
-  - name: zl230222Test-zl230222Test.FioriUIApp
+  - name: zl230222Test-zl230222Test.FioriApp2
     type: html5
-    path: app/zl230222Test.FioriUIApp
+    path: app/zl230222Test.FioriApp2
     build-parameters:
       builder: custom
       commands:
@@ -51,9 +51,27 @@ modules:
           --include-task=generateCachebusterInfo
         - mkdir dist-zip
         - >-
-          bash -c "cd dist && npx bestzip ../dist-zip/zl230222TestFioriUIApp.zip
+          bash -c "cd dist && npx bestzip ../dist-zip/zl230222TestFioriApp2.zip
           *"
-      _artifactName: zl230222TestFioriUIApp.zip
+      _artifactName: zl230222TestFioriApp2.zip
+      supported-platforms: []
+      build-result: dist-zip
+  - name: zl230222Test-zl230222Test.MyFioriApp
+    type: html5
+    path: app/zl230222Test.MyFioriApp
+    build-parameters:
+      builder: custom
+      commands:
+        - rm -rf dist-zip dist
+        - >-
+          npx -p @ui5/cli ui5 build --dest dist
+          --include-task=generateManifestBundle
+          --include-task=generateCachebusterInfo
+        - mkdir dist-zip
+        - >-
+          bash -c "cd dist && npx bestzip ../dist-zip/zl230222TestMyFioriApp.zip
+          *"
+      _artifactName: zl230222TestMyFioriApp.zip
       supported-platforms: []
       build-result: dist-zip
   - name: zl230222Test-db-deployer
@@ -153,9 +171,13 @@ modules:
           artifacts:
             - MDKUIAPP.zip
           target-path: resources
-        - name: zl230222Test-zl230222Test.FioriUIApp
+        - name: zl230222Test-zl230222Test.FioriApp2
           artifacts:
-            - zl230222TestFioriUIApp.zip
+            - zl230222TestFioriApp2.zip
+          target-path: resources
+        - name: zl230222Test-zl230222Test.MyFioriApp
+          artifacts:
+            - zl230222TestMyFioriApp.zip
           target-path: resources
         - name: zl230222Test-launchpad
           artifacts:
@@ -175,7 +197,11 @@ resources:
       path: xs-security.json
       config:
         xsappname: zl230222Test-${space}
-        role-collections: []
+        role-collections:
+          - description: ''
+            name: zl230222Test-BooksRole-${space}
+            role-template-references:
+              - $XSAPPNAME.BooksRole
   - type: org.cloudfoundry.managed-service
     name: zl230222Test-service-db
     parameters:

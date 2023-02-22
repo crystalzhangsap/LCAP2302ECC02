@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"zl230222TestService","DetailsURL":"./service/zl230222Test/","Metadata":"./service/zl230222Test/$metadata","Entities":[{"Name":"SrvAuthors","URL":"./service/zl230222Test/SrvAuthors","FioriURL":""},{"Name":"SrvBooks","URL":"./service/zl230222Test/SrvBooks","FioriURL":""}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"zl230222TestService","DetailsURL":"./service/zl230222Test/","Metadata":"./service/zl230222Test/$metadata","Entities":[{"Name":"SrvAuthors","URL":"./service/zl230222Test/SrvAuthors","FioriURL":""},{"Name":"SrvBooks","URL":"./service/zl230222Test/SrvBooks","FioriURL":""},{"Name":"SrvContacts","URL":"./service/zl230222Test/SrvContacts","FioriURL":""},{"Name":"SrvCampaigns","URL":"./service/zl230222Test/SrvCampaigns","FioriURL":""}],"EntitiesCount":4}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

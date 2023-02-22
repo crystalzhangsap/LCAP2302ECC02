@@ -1,7 +1,21 @@
 {
-  "scopes": [],
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.BooksRole",
+      "description": "BooksRole"
+    }
+  ],
   "attributes": [],
-  "role-templates": [],
+  "role-templates": [
+    {
+      "name": "BooksRole",
+      "description": "",
+      "scope-references": [
+        "$XSAPPNAME.BooksRole"
+      ],
+      "attribute-references": []
+    }
+  ],
   "xsappname": "zl230222Test",
   "tenant-mode": "dedicated"
 }
