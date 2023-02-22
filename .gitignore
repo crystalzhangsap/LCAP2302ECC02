@@ -33,3 +33,5 @@ mta_archives/
 # LCAP
 build/ui-deployer/
 build/dist/
+
+package-lock.json
